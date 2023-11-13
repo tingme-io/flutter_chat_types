@@ -123,6 +123,7 @@ abstract class ImageMessage extends Message {
         status,
         updatedAt,
         uri,
+        uris,
         width,
       ];
 
@@ -142,6 +143,7 @@ abstract class ImageMessage extends Message {
     Status? status,
     int? updatedAt,
     String? uri,
+    List<String>? uris,
     double? width,
   });
 
