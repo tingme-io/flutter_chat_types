@@ -28,6 +28,7 @@ abstract class ImageMessage extends Message {
     MessageType? type,
     super.updatedAt,
     required this.uri,
+    required this.uris,
     this.width,
   }) : super(type: type ?? MessageType.image);
 
@@ -47,6 +48,7 @@ abstract class ImageMessage extends Message {
     MessageType? type,
     int? updatedAt,
     required String uri,
+    required List<String> uris,
     double? width,
   }) = _ImageMessage;
 
@@ -82,6 +84,7 @@ abstract class ImageMessage extends Message {
         type: MessageType.image,
         updatedAt: updatedAt,
         uri: partialImage.uri,
+        uris: [partialImage.uri], //TODO: (Trien) check it
         width: partialImage.width,
       );
 
@@ -96,6 +99,9 @@ abstract class ImageMessage extends Message {
 
   /// The image source (either a remote URL or a local resource).
   final String uri;
+
+  /// The image sources (either a remote URL or a local resource).
+  final List<String> uris;
 
   /// Image width in pixels.
   final double? width;
@@ -162,6 +168,7 @@ class _ImageMessage extends ImageMessage {
     super.type,
     super.updatedAt,
     required super.uri,
+    required super.uris,
     super.width,
   }) : super._();
 
@@ -181,6 +188,7 @@ class _ImageMessage extends ImageMessage {
     dynamic status = _Unset,
     dynamic updatedAt = _Unset,
     String? uri,
+    List<String>? uris,
     dynamic width = _Unset,
   }) =>
       _ImageMessage(
@@ -203,6 +211,7 @@ class _ImageMessage extends ImageMessage {
         status: status == _Unset ? this.status : status as Status?,
         updatedAt: updatedAt == _Unset ? this.updatedAt : updatedAt as int?,
         uri: uri ?? this.uri,
+        uris: uris ?? this.uris,
         width: width == _Unset ? this.width : width as double?,
       );
 }

@@ -24,6 +24,7 @@ ImageMessage _$ImageMessageFromJson(Map<String, dynamic> json) => ImageMessage(
       type: $enumDecodeNullable(_$MessageTypeEnumMap, json['type']),
       updatedAt: json['updatedAt'] as int?,
       uri: json['uri'] as String,
+      uris: (json['uris'] as List<dynamic>).map((e) => e as String).toList(),
       width: (json['width'] as num?)?.toDouble(),
     );
 
@@ -52,6 +53,7 @@ Map<String, dynamic> _$ImageMessageToJson(ImageMessage instance) {
   val['name'] = instance.name;
   val['size'] = instance.size;
   val['uri'] = instance.uri;
+  val['uris'] = instance.uris;
   writeNotNull('width', instance.width);
   return val;
 }
