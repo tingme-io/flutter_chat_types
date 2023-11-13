@@ -24,7 +24,7 @@ ImageMessage _$ImageMessageFromJson(Map<String, dynamic> json) => ImageMessage(
       type: $enumDecodeNullable(_$MessageTypeEnumMap, json['type']),
       updatedAt: json['updatedAt'] as int?,
       uri: json['uri'] as String,
-      uris: (json['uris'] as List<dynamic>).map((e) => e as String).toList(),
+      uris: (json['uris'] as List<dynamic>?)?.map((e) => e as String).toList(),
       width: (json['width'] as num?)?.toDouble(),
     );
 

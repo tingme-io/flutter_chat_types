@@ -48,7 +48,7 @@ abstract class ImageMessage extends Message {
     MessageType? type,
     int? updatedAt,
     required String uri,
-    required List<String> uris,
+    required List<String>? uris,
     double? width,
   }) = _ImageMessage;
 
