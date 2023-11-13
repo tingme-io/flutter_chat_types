@@ -101,7 +101,7 @@ abstract class ImageMessage extends Message {
   final String uri;
 
   /// The image sources (either a remote URL or a local resource).
-  final List<String> uris;
+  final List<String>? uris;
 
   /// Image width in pixels.
   final double? width;

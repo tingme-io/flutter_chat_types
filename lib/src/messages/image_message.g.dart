@@ -53,7 +53,7 @@ Map<String, dynamic> _$ImageMessageToJson(ImageMessage instance) {
   val['name'] = instance.name;
   val['size'] = instance.size;
   val['uri'] = instance.uri;
-  val['uris'] = instance.uris;
+  writeNotNull('uris', instance.uris);
   writeNotNull('width', instance.width);
   return val;
 }
