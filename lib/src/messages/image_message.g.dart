@@ -12,7 +12,7 @@ ImageMessage _$ImageMessageFromJson(Map<String, dynamic> json) => ImageMessage(
       height: (json['height'] as num?)?.toDouble(),
       id: json['id'] as int,
       metadata: json['metadata'] as Map<String, dynamic>?,
-      name: json['name'] as String,
+      name: json['name'] as String?,
       remoteId: json['remoteId'] as String?,
       repliedMessage: json['repliedMessage'] == null
           ? null
@@ -50,7 +50,7 @@ Map<String, dynamic> _$ImageMessageToJson(ImageMessage instance) {
   val['type'] = _$MessageTypeEnumMap[instance.type]!;
   writeNotNull('updatedAt', instance.updatedAt);
   writeNotNull('height', instance.height);
-  val['name'] = instance.name;
+  writeNotNull('name', instance.name);
   val['size'] = instance.size;
   val['uri'] = instance.uri;
   writeNotNull('uris', instance.uris);

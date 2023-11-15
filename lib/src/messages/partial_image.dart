@@ -35,7 +35,7 @@ class PartialImage {
   final Map<String, dynamic>? metadata;
 
   /// The name of the image.
-  final String name;
+  final String? name;
 
   /// Message that is being replied to with the current message.
   final Message? repliedMessage;

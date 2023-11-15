@@ -38,7 +38,7 @@ abstract class ImageMessage extends Message {
     double? height,
     required int id,
     Map<String, dynamic>? metadata,
-    required String name,
+    required String? name,
     String? remoteId,
     Message? repliedMessage,
     String? roomId,
@@ -92,7 +92,7 @@ abstract class ImageMessage extends Message {
   final double? height;
 
   /// The name of the image.
-  final String name;
+  final String? name;
 
   /// Size of the image in bytes.
   final num size;
