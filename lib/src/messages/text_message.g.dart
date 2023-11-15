@@ -9,7 +9,7 @@ part of 'text_message.dart';
 TextMessage _$TextMessageFromJson(Map<String, dynamic> json) => TextMessage(
       author: User.fromJson(json['author'] as Map<String, dynamic>),
       createdAt: json['createdAt'] as int?,
-      id: json['id'] as String,
+      id: json['id'] as int,
       metadata: json['metadata'] as Map<String, dynamic>?,
       previewData: json['previewData'] == null
           ? null

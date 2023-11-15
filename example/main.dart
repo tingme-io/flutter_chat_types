@@ -3,7 +3,7 @@ import 'package:flutter_chat_types/flutter_chat_types.dart'
 
 void main() {
   const user = User(id: 1);
-  const message = TextMessage(author: user, id: 'id', text: 'text');
+  const message = TextMessage(author: user, id: 1, text: 'text');
   // ignore: avoid_print
   print(message.toJson());
   final json = {

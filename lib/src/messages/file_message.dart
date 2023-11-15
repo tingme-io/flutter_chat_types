@@ -34,7 +34,7 @@ abstract class FileMessage extends Message {
   const factory FileMessage({
     required User author,
     int? createdAt,
-    required String id,
+    required int id,
     bool? isLoading,
     Map<String, dynamic>? metadata,
     String? mimeType,
@@ -58,7 +58,7 @@ abstract class FileMessage extends Message {
   factory FileMessage.fromPartial({
     required User author,
     int? createdAt,
-    required String id,
+    required int id,
     bool? isLoading,
     required PartialFile partialFile,
     String? remoteId,
@@ -171,7 +171,7 @@ class _FileMessage extends FileMessage {
     User? author,
     dynamic createdAt = _Unset,
     dynamic height = _Unset,
-    String? id,
+    dynamic id,
     dynamic isLoading = _Unset,
     dynamic metadata = _Unset,
     dynamic mimeType = _Unset,

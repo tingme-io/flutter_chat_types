@@ -32,7 +32,7 @@ abstract class TextMessage extends Message {
   const factory TextMessage({
     required User author,
     int? createdAt,
-    required String id,
+    required int id,
     Map<String, dynamic>? metadata,
     PreviewData? previewData,
     String? remoteId,
@@ -53,7 +53,7 @@ abstract class TextMessage extends Message {
   factory TextMessage.fromPartial({
     required User author,
     int? createdAt,
-    required String id,
+    required int id,
     required PartialText partialText,
     String? remoteId,
     String? roomId,
@@ -143,7 +143,7 @@ class _TextMessage extends TextMessage {
   Message copyWith({
     User? author,
     dynamic createdAt = _Unset,
-    String? id,
+    dynamic id,
     dynamic metadata = _Unset,
     dynamic previewData = _Unset,
     dynamic remoteId = _Unset,

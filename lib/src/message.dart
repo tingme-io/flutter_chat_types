@@ -79,7 +79,7 @@ abstract class Message extends Equatable {
   final int? createdAt;
 
   /// Unique ID of the message.
-  final String id;
+  final int id;
 
   /// Additional custom metadata or attributes related to the message.
   final Map<String, dynamic>? metadata;

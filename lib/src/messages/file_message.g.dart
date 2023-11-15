@@ -9,7 +9,7 @@ part of 'file_message.dart';
 FileMessage _$FileMessageFromJson(Map<String, dynamic> json) => FileMessage(
       author: User.fromJson(json['author'] as Map<String, dynamic>),
       createdAt: json['createdAt'] as int?,
-      id: json['id'] as String,
+      id: json['id'] as int,
       isLoading: json['isLoading'] as bool?,
       metadata: json['metadata'] as Map<String, dynamic>?,
       mimeType: json['mimeType'] as String?,

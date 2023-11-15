@@ -30,7 +30,7 @@ abstract class CustomMessage extends Message {
   const factory CustomMessage({
     required User author,
     int? createdAt,
-    required String id,
+    required int id,
     Map<String, dynamic>? metadata,
     String? remoteId,
     Message? repliedMessage,
@@ -49,7 +49,7 @@ abstract class CustomMessage extends Message {
   factory CustomMessage.fromPartial({
     required User author,
     int? createdAt,
-    required String id,
+    required int id,
     required PartialCustom partialCustom,
     String? remoteId,
     String? roomId,
@@ -126,7 +126,7 @@ class _CustomMessage extends CustomMessage {
   Message copyWith({
     User? author,
     dynamic createdAt = _Unset,
-    String? id,
+    dynamic id,
     dynamic metadata = _Unset,
     dynamic remoteId = _Unset,
     dynamic repliedMessage = _Unset,

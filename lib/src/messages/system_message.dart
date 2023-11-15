@@ -30,7 +30,7 @@ abstract class SystemMessage extends Message {
   const factory SystemMessage({
     User author,
     int? createdAt,
-    required String id,
+    required int id,
     Map<String, dynamic>? metadata,
     String? remoteId,
     Message? repliedMessage,
@@ -107,7 +107,7 @@ class _SystemMessage extends SystemMessage {
   Message copyWith({
     User? author,
     dynamic createdAt = _Unset,
-    String? id,
+    dynamic id,
     dynamic metadata = _Unset,
     dynamic remoteId = _Unset,
     dynamic repliedMessage = _Unset,
