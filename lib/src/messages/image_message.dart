@@ -43,11 +43,11 @@ abstract class ImageMessage extends Message {
     Message? repliedMessage,
     String? roomId,
     bool? showStatus,
-    required num size,
+    required num? size,
     Status? status,
     MessageType? type,
     int? updatedAt,
-    required String uri,
+    required String? uri,
     required List<String>? uris,
     double? width,
   }) = _ImageMessage;
@@ -95,10 +95,10 @@ abstract class ImageMessage extends Message {
   final String? name;
 
   /// Size of the image in bytes.
-  final num size;
+  final num? size;
 
   /// The image source (either a remote URL or a local resource).
-  final String uri;
+  final String? uri;
 
   /// The image sources (either a remote URL or a local resource).
   final List<String>? uris;
