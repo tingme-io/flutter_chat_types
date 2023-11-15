@@ -9,7 +9,7 @@ part of 'user.dart';
 User _$UserFromJson(Map<String, dynamic> json) => User(
       createdAt: json['createdAt'] as int?,
       firstName: json['firstName'] as String?,
-      id: json['id'] as String,
+      id: json['id'] as int?,
       imageUrl: json['imageUrl'] as String?,
       lastName: json['lastName'] as String?,
       lastSeen: json['lastSeen'] as int?,
@@ -29,7 +29,7 @@ Map<String, dynamic> _$UserToJson(User instance) {
 
   writeNotNull('createdAt', instance.createdAt);
   writeNotNull('firstName', instance.firstName);
-  val['id'] = instance.id;
+  writeNotNull('id', instance.id);
   writeNotNull('imageUrl', instance.imageUrl);
   writeNotNull('lastName', instance.lastName);
   writeNotNull('lastSeen', instance.lastSeen);

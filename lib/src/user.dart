@@ -27,7 +27,7 @@ abstract class User extends Equatable {
   const factory User({
     int? createdAt,
     String? firstName,
-    required String id,
+    required int? id,
     String? imageUrl,
     String? lastName,
     int? lastSeen,
@@ -46,7 +46,7 @@ abstract class User extends Equatable {
   final String? firstName;
 
   /// Unique ID of the user.
-  final String id;
+  final int? id;
 
   /// Remote image URL representing user's avatar.
   final String? imageUrl;
@@ -114,7 +114,7 @@ class _User extends User {
   User copyWith({
     dynamic createdAt = _Unset,
     dynamic firstName = _Unset,
-    String? id,
+    dynamic id,
     dynamic imageUrl = _Unset,
     dynamic lastName = _Unset,
     dynamic lastSeen = _Unset,

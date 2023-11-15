@@ -13,7 +13,7 @@ part 'system_message.g.dart';
 abstract class SystemMessage extends Message {
   /// Creates a custom message.
   const SystemMessage._({
-    super.author = const User(id: 'system'),
+    super.author = const User(id: 1),
     super.createdAt,
     required super.id,
     super.metadata,
